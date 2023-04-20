@@ -1,18 +1,20 @@
+// explicit types
+var character;
+var age;
+var isLoggedIn;
+age = 'tony';
 // arrays
-var names = ['luigi', 'mario', 'yoshi'];
-names.push('toad');
-names.push(22);
-var numbers = [10, 20, 30, 40];
-numbers.push(25);
-// numbers.push('emyr')
-var mixed = ['ken', 4, 'emyr', 8, 9];
-mixed.push('ryu');
-mixed.push(10);
+var ninjas; // cant push() as its not initialised 
+var moreNinjas = []; // can push() here 
+// wont work
+ninjas = [10, 23];
+// union types
+var mixed = []; // can store strings and numbers here using (string|number) union
+mixed.push('hello');
+mixed.push(20);
+mixed.push(false); // wont work 
+var uid; // can be string or number
 // objects
-var ninja = {
-    name: 'mario',
-    belt: 'black',
-    age: 30
-};
-ninja.age = 40;
-ninja.name = 'ryu';
+var ninjaOne; // can be any type of object
+ninjaOne = { name: 'yoshi', age: 30 };
+var ninjaTwo;

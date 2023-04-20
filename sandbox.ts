@@ -1,25 +1,31 @@
+// explicit types
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
+
+age = 'tony'
+
 // arrays
-let names = ['luigi', 'mario', 'yoshi'];
+let ninjas: string[]; // cant push() as its not initialised 
+let moreNinjas: string[] = []; // can push() here 
 
-names.push('toad');
-names.push(22);
+// wont work
+ninjas = [10, 23]
 
-let numbers = [10, 20, 30, 40];
+// union types
+let mixed: (string|number)[] = []; // can store strings and numbers here using (string|number) union
+mixed.push('hello');
+mixed.push(20);
+mixed.push(false); // wont work 
 
-numbers.push(25);
-// numbers.push('emyr')
-
-let mixed = ['ken', 4, 'emyr', 8, 9]
-
-mixed.push('ryu')
-mixed.push(10)
+let uid: string|number // can be string or number
 
 // objects
-let ninja = {
-    name: 'mario',
-    belt: 'black',
-    age: 30
-};
+let ninjaOne: object; // can be any type of object
+ninjaOne = { name: 'yoshi', age:30 }
 
-ninja.age = 40
-ninja.name = 'ryu'
+let ninjaTwo: {
+    name: string,
+    age: number,
+    beltColour: string
+}
